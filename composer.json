@@ -10,6 +10,6 @@
     "ext-curl": "*"
   },
   "autoload": {
-      "classmap": [ "src/" ]
+      "classmap": [ "src/TopSdk.php", "src/aliyun/", "src/top/" ]
   }
 }
