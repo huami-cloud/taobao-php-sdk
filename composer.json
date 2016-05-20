@@ -10,6 +10,6 @@
     "ext-curl": "*"
   },
   "autoload": {
-      "classmap": [ "src/top", "src/aliyun" ]
+      "classmap": [ "src/" ]
   }
 }
