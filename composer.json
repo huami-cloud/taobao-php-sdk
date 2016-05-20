@@ -1,0 +1,17 @@
+{
+  "name": "huami-cloud/taobao-php-sdk",
+  "description": "Taobao php sdk",
+  "keywords": ["taobao", "dayu", "huami", "xiaomi"],
+  "homepage": "http://huami.com/",
+  "license": "MIT",
+  "authors": [],
+  "require": {
+    "php": ">=5.0.0",
+    "ext-curl": "*"
+  },
+  "autoload": {
+      "psr-4": {
+          "Taobao\\": "src/"
+      }
+  },
+}
