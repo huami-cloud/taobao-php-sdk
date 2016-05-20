@@ -10,8 +10,6 @@
     "ext-curl": "*"
   },
   "autoload": {
-      "psr-4": {
-          "Taobao\\": "src/"
-      }
+      "classmap": [ "src/TopSdk.php" ]
   }
 }
