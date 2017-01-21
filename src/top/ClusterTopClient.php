@@ -109,12 +109,14 @@ class ClusterTopClient extends TopClient {
 		if($apiCfgArray){	
 			if(array_key_exists($apiName,$apiCfgArray)){
 				$apiCfg = $apiCfgArray[$apiName];
-				$userFlag = $apiCfg['user'];
-				$flag = $this->getUserFlag($session);
-				if($userFlag && $flag ){
-					return $this->getEnvBySessionFlag($userFlag,$flag);
-				}else{
-					return $this->getRandomWeightElement($apiCfg['rule']);
+				if(array_key_exists('user',$apiCfg)){
+					$userFlag = $apiCfg['user'];
+					$flag = $this->getUserFlag($session);
+					if($userFlag && $flag ){
+						return $this->getEnvBySessionFlag($userFlag,$flag);
+					}else{
+						return $this->getRandomWeightElement($apiCfg['rule']);
+					}
 				}
 			}
 		}
